@@ -6,7 +6,8 @@ import AudioPlayer from './components/AudioPlayer';
 import ProcessingStatus from './components/ProcessingStatus';
 import ResultsDisplay from './components/ResultsDisplay';
 
-const API_URL = 'http://localhost:5000/api';
+// Use environment variable for API URL, fallback to localhost for development
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
 function App() {
   const [selectedFile, setSelectedFile] = useState(null);
